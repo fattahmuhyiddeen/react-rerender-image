@@ -43,7 +43,7 @@ export default props => {
 
   useEffect(() => {
     refresh();
-    setInterval(() => refresh(), 12000);
+    setInterval(() => refresh(), 180000);
   }, []);
 
   const children = [];
