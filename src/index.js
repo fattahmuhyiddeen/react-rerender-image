@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 export default props => {
-  const [is_render_img1, set_is_render_img1] = useState(<img id="camcam1" {...props} />);
-  const [is_render_img2, set_is_render_img2] = useState();
+  const [is_render_img1, set_is_render_img1] = useState(true);
+  const [is_render_img2, set_is_render_img2] = useState(false);
   const [is_show_img1, set_is_show_img1] = useState(true);
   const [is_show_img2, set_is_show_img2] = useState(false);
   const refresh = () => {
@@ -46,8 +46,8 @@ export default props => {
     setInterval(() => refresh(), 12000);
   }, []);
 
-  return <>
+  return (<>
     {!!is_render_img1 && <img {...props} style={{ ...props.style, display: is_show_img1 ? 'block' : 'none' }} />}
     {!!is_render_img2 && <img {...props} style={{ ...props.style, display: is_show_img2 ? 'block' : 'none' }} />}
-  </>;
+  </>);
 }
