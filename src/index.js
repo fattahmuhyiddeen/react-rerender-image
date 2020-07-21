@@ -46,8 +46,13 @@ export default props => {
     setInterval(() => refresh(), 12000);
   }, []);
 
-  return (<>
-    {!!is_render_img1 && <img {...props} style={{ ...props.style, display: is_show_img1 ? 'block' : 'none' }} />}
-    {!!is_render_img2 && <img {...props} style={{ ...props.style, display: is_show_img2 ? 'block' : 'none' }} />}
-  </>);
+  const children = [];
+  if (!!is_render_img1) {
+    children.push(<img {...props} style={{ ...props.style, display: is_show_img1 ? 'block' : 'none' }} />)
+  }
+  if (!!is_render_img2) {
+    children.push(<img {...props} style={{ ...props.style, display: is_show_img2 ? 'block' : 'none' }} />)
+  }
+
+  return children;
 }

@@ -1,10 +1,3 @@
-import React from 'react'
 
-import { ExampleComponent } from 'react-rerender-image'
-import 'react-rerender-image/dist/index.css'
-
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
-
+import App from 'react-rerender-image'
 export default App
