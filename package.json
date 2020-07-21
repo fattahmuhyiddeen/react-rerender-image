@@ -1,6 +1,6 @@
 {
   "name": "react-rerender-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "periodically rerender image in react",
   "author": "fattahmuhyiddeen",
   "license": "MIT",
